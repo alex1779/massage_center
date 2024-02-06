@@ -1,0 +1,114 @@
+<html>
+
+<head>
+
+    {% load static %}
+
+    <!-- Bootstrap -->
+    <link href="{% static 'massagecenterapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Fonts -->
+     
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+    <title>Massage Center</title>
+
+    <!-- Styles -->
+    <link href="{% static 'massagecenterapp/css/gestion.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="site-heading text-center text-black d-none d-lg-block">
+      <span class="site-heading-lower">Massage Center</span>
+    </h1>
+
+    <div style="color: white;text-align: right;margin-right: 100px;">
+
+    </div>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Massage Center</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Home</a>
+          </li>
+
+          <li class="nav-item {% if request.path == '/services/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Services' %}">Services</a>
+          </li>
+
+          <li class="nav-item {% if request.path == '/about/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'About' %}">About Us</a>
+          </li>
+         
+          <li class="nav-item {% if request.path == '/quality/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Quality' %}">Quality Assurance</a>
+          </li>
+
+          <li class="nav-item {% if request.path == '/reservations/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Reservations' %}">Reservations</a>
+          </li>
+
+          <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contact' %}">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  {% block content %}
+
+  {% endblock %}
+
+
+    <!-- Footer -->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0">
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	        <a href="#" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+	    </p>
+        <p class="m-0 mbt">
+        	<a href="sample.html" class="link">Privacy Policy</a> ·
+        	<a href="sample.html" class="link">Legal warning</a> ·
+        	<a href="sample.html" class="link">Cookies</a>
+		</p>
+        <p class="m-0 mbt1">&copy; Massage Center 2024</p>
+      </div>
+	</footer>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'massagecenterapp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'massagecenterapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>

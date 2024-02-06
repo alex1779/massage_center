@@ -1,0 +1,47 @@
+{% extends "massagecenterapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="title-service text-center section-service">Home</h1>
+
+<div class="intro-bg-main">
+    <h1 class="intro-bg-main-h1">Welcome to the Center Massage Place</h1>
+    <h2 class="intro-bg-main-h2 text-right">A Place For Your Next Destination..</h2>
+</div>
+
+
+<section class="page-section clearfix">
+    
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'home/img/massage-therapy-1612308_1280.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-lower">Your Moment of Pleasure Begins Here..</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+    <h2 class="section-heading mb-4" >
+        <span class="section-heading-upper home-description">In our commitment to your well-being, we recognize the paramount importance of physical health in your life. Therefore, we are dedicated to providing you with a comprehensive approach to improve your quality of life. Our services range from personalized exercise programs to nutritional counseling, all designed to strengthen your body and mind. We are here to accompany you every step of your journey towards a healthier and fuller life. With us, you can count on receiving the support and resources you need to reach your full potential and enjoy a full, vibrant life !</span>
+    </h2>
+</div>
+
+<div class="quality-1"></div>
+
+<div class="slider-container">
+    <div class="slider position"></div>
+</div>
+
+<div class="quality-1"></div>
+
+<h1 class="title-service text-center section-service">Please Check Our Services</h1>
+<a class="quality-a" href="{% url 'Services' %}">Go !</a>
+<div class="quality-1"></div>
+
+{% endblock %}
