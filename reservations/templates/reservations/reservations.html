@@ -1,0 +1,45 @@
+{% extends "massagecenterapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="title-service text-center section-service">Book Now!</h1>
+
+
+<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+    <h2 class="section-heading mb-4" >
+        <span class="section-heading-upper">Please select</span>
+    </h2>
+</div>
+
+
+<form class="containerBook center-content">
+
+    <div class="containerBookDiv">
+
+        <div class="container-col">
+            <label class="containerBookLabel">Service</label>
+            <select name="select">
+                <option value="value1" selected>Massage Therapy</option>
+                <option value="value2">Spa</option>
+                <option value="value3">Aromatherapy</option>
+                <option value="value4">Yoga</option>
+              </select>
+        </div>
+
+        <div class="container-col">
+            <label class="containerBookLabel">Date</label>
+            <input type="date" required=True>
+        </div>
+
+    </div>
+
+    <div class="containerBookDivSubmit center-content">
+        <input type="submit" value="Check Availability" class="containerBookDivSubmitBtn">
+    </div>
+
+</form>
+
+<div class="quality-1"></div>
+{% endblock %}
