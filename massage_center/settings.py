@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6x^5^et5-o1pc($*#hr8l54^7zt9vdwwo%5w%5q!hh!d!^tf0$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'services',
     'contact',
     'reservations',
+    'authentication',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -138,6 +141,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp-mail.outlook.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 25
-EMAIL_HOST_USER = "user@hotmail.com"
-EMAIL_HOST_PASSWORD = "password"
 EMAIL_USE_SSL = False
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'

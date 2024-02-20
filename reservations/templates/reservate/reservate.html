@@ -1,0 +1,44 @@
+{% extends "massagecenterapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="title-service text-center section-service">Hello {{ form.name.value }} {{ form.surname.value }}!</h1>
+
+
+
+
+<div class="center-content">
+    <h2>Your reservation</h2>
+
+    <div class="divform">
+        {{ form.name.value }}
+    </div>
+
+    <div class="divform">
+        {{ form.surname.value }}
+    </div>
+
+    <div class="divform">
+        {{ form.service.value }}
+    </div>
+
+    <div class="divform">
+        {{ form.date.value }}
+    </div>
+
+    <div class="divform">
+        {{ form.hour.value }}
+    </div>
+
+    <div class="divform">
+        <h3 style="font-weight: bolder;">It's confirmed!</h3>
+    </div>
+    
+    
+</div>
+
+
+
+{% endblock %}

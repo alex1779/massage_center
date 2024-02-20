@@ -7,28 +7,68 @@
 
 <h1 class="title-service text-center section-service">Services</h1>
 
-{% for service in services %}
-
 <section class="page-section clearfix">
-    
-    <div class="container">
-      <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{service.image.url}}" alt="" style="width: 50%;">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-lower">{{service.title}}</span>
-            <span class="section-heading-upper">{{service.content}}</span>
-          </h2>
-        </div>
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '../media/services/service 1.jpg' %}" alt="" style="width: 50%;">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower">Spa</span>
+          <span class="section-heading-upper">EXPERIENCE THE LUXURY OF SKIN CARE AT OUR SPA, WHERE WE PROVIDE SPECIALIZED SERVICES, HIGHLIGHTING OUR FACIAL CLEANSING. OUR EXPERTS USE ADVANCED TECHNIQUES AND HIGH-QUALITY PRODUCTS TO REVITALIZE YOUR FACE, LEAVING IT RADIANT AND REJUVENATED. DISCOVER THE WELL-BEING YOU DESERVE WITH OUR EXCLUSIVE FACIAL CARE TREATMENT.</span>
+        </h2>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '../media/services/service 2.jpg' %}" alt="" style="width: 50%;">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower">AROMATHERAPY</span>
+          <span class="section-heading-upper">DISCOVER THE HARMONY BETWEEN BODY AND SOUL WITH OUR AROMATHERAPY OFFER. IMMERSE YOURSELF IN A UNIQUE SENSORY EXPERIENCE THAT ENHANCES YOUR WELL-BEING. THE THERAPEUTIC EFFECTS OF AROMAS IMPROVE YOUR QUALITY OF LIFE, PROVIDING BALANCE AND SERENITY. WITH US, YOU FIND THE WAY TO COMPREHENSIVE CARE FOR BODY AND SOUL.</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '../media/services/service 3.jpg' %}" alt="" style="width: 50%;">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower">MASSAGE THERAPY</span>
+          <span class="section-heading-upper">DISCOVER THE OASIS OF RELAXATION IN OUR CENTER, WHERE WE OFFER YOU REVITALIZING BODY MASSAGES. IMMERSE YOURSELF IN A UNIQUE EXPERIENCE THAT RELIEVES STRESS, PROVIDING MOMENTS OF PURE WELL-BEING. LEAVE WORRIES BEHIND AND GIVE YOURSELF THE PEACE OF MIND YOU NEED. YOUR ESCAPE TO RELAXATION STARTS HERE.</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '../media/services/service 4.jpg' %}" alt="" style="width: 50%;">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+          <span class="section-heading-lower">YOGA</span>
+          <span class="section-heading-upper">EXPERIENCE THE ESSENCE OF WELL-BEING WITH OUR EXCLUSIVE YOGA SERVICE. ENJOY SESSIONS IN OUR FACILITIES OR JOIN OUTDOOR MEETINGS, GUIDED BY EXPERTS. DISCOVER THE HARMONY BETWEEN MIND AND BODY, OFFERING A UNIQUE EXPERIENCE THAT ENHANCES YOUR BALANCE AND COMPREHENSIVE WELL-BEING.</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="services-b center-content">
+  <a class="services-a" href="{% url 'Reservations' %}">Please check our availability</a>
+</div>
 
 
 
-{% endfor %}
-
-<a class="services-a" href="{% url 'Reservations' %}">Please check our availability</a>
 <div class="quality-1"></div>
 
 {% endblock %}

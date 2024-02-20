@@ -4,42 +4,59 @@
 
 {% block content %}
 
-<h1 class="title-service text-center section-service">Book Now!</h1>
+
+{% if user.is_authenticated %}
 
 
-<div class="intro-text left-0 text-center bg-faded p-5 rounded">
-    <h2 class="section-heading mb-4" >
-        <span class="section-heading-upper">Please select</span>
-    </h2>
-</div>
+
+    <h1 class="title-service text-center section-service">Hello {{ user.username }}!</h1>
+
+    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Please select service and date</span>
+        </h2>
+    </div>
+
+    <div class="center-content">
+        <div class="container_book center-content">
 
 
-<form class="containerBook center-content">
+            <form action="" method="post" class="containerBook center-content" style="color: white">
+                {% csrf_token %}
+                {{form.as_table}}
+        
 
-    <div class="containerBookDiv">
+                <div class="containerBookDivSubmit center-content">
+                    <input type="submit" value="Make reservation" class="containerBookDivSubmitBtn">
+                </div>
+            </form>
+    
 
-        <div class="container-col">
-            <label class="containerBookLabel">Service</label>
-            <select name="select">
-                <option value="value1" selected>Massage Therapy</option>
-                <option value="value2">Spa</option>
-                <option value="value3">Aromatherapy</option>
-                <option value="value4">Yoga</option>
-              </select>
+    
         </div>
+    </div>
 
-        <div class="container-col">
-            <label class="containerBookLabel">Date</label>
-            <input type="date" required=True>
-        </div>
+
+
+
+{% else %}
+
+    <h1 class="title-service text-center section-service">Book Now!</h1>
+
+    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">In order to make your reservation you must be an authenticated user.</span>
+        </h2>
+    </div>
+
+    <div class="login-div-buttons">
+        <a href="{% url 'loguear' %}" class="login-button">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" class="login-button">Sign up</a>
 
     </div>
 
-    <div class="containerBookDivSubmit center-content">
-        <input type="submit" value="Check Availability" class="containerBookDivSubmitBtn">
-    </div>
 
-</form>
+{% endif %}
+
 
 <div class="quality-1"></div>
 {% endblock %}

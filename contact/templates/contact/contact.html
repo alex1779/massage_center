@@ -12,7 +12,7 @@
         <p style="color: black;">Information sent correctly</p>
     {% endif %}
 
-    <form action="" method="post" class="container-form-form">
+    <form action="https://formspree.io/f/mjvnwpbe" method="POST" class="container-form-form">
         {% csrf_token %}
         <table style="color: white;">{{myForm.as_table}}</table>
         <input type="submit" value="Send" class="containerBookDivSubmitBtn">
