@@ -1,1 +1,1 @@
-web: gunicorn masage_center.wsgi
+web: gunicorn massage_center.wsgi
