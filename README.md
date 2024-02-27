@@ -68,7 +68,7 @@
 
 ## 🚀 See a quick video of the page<a name="live-demo"> </a>
 
-[![Watch the video!!](https://i9.ytimg.com/vi_webp/L-d_ughvN6s/mq3.webp?sqp=CJjg864G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgWyh_MA8=&rs=AOn4CLDOeJuLRk6edsObhbrWxoJIbeTddg)](https://youtu.be/L-d_ughvN6s)
+[![Watch the video!!](https://img.youtube.com/vi/L-d_ughvN6s/maxresdefault.jpg)](https://youtu.be/L-d_ughvN6s)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
